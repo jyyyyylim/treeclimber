@@ -36,7 +36,7 @@ func printArr(input []string) {
 
 func main() {
 	http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
-	rootSubdomain := "https://test-website.sppcontests.org/"
+	rootSubdomain := "https://test-website.sppcontests.org/2023-regional-finals"
 
 	fmt.Println("traverser started!")
 
@@ -45,7 +45,8 @@ func main() {
 	treeRoot.append(rootSubdomain, "root")
 
 	//traverse given root, assign references
-	// treeRoot.browse()
+	treeRoot.Head.browse()
+	treeRoot.print()
 
 	// for _, v := range rootLinks {}
 

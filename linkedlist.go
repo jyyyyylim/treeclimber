@@ -42,7 +42,7 @@ func (ll *Sitemap) append(documentLocation string, documentName string) {
 func refName(pageMemAddr []*Page) string {
 	var buffer string
 	for _, v := range pageMemAddr {
-		buffer += /*  v + ": " + */ v.DocumentName
+		buffer += /*  v + ": " + */ v.DocumentName + ", "
 	}
 
 	return buffer
